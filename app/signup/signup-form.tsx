@@ -33,8 +33,7 @@ export default function SignupForm() {
       return
     }
 
-    router.push("/")
-    router.refresh()
+    window.location.href = "/"
   }
 
   return (
