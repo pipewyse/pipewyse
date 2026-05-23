@@ -1,11 +1,22 @@
+import { redirect } from "next/navigation"
+import { createClient } from "@/lib/supabase-server"
 import LogoutButton from "@/components/logout-button"
 import Link from "next/link"
 
-export default function DashboardLayout({
+export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const supabase = await createClient()
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  if (!user) {
+    redirect("/login")
+  }
   return (
     <main className="min-h-screen bg-zinc-50">
       <div className="flex">
