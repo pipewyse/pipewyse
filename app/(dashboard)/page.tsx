@@ -53,7 +53,7 @@ export default async function DashboardPage() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-violet-100 leading-relaxed">
-              Pipewyse helps design service companies move from conversation to qualification,
+              Workwyse helps design service companies move from conversation to qualification,
               proposal, execution, and delivery in one connected workflow.
             </p>
           </div>

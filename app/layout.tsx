@@ -8,7 +8,7 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "Pipewyse",
+  title: "Workwyse",
   description: "AI operational workflow platform",
 }
 

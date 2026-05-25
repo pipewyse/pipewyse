@@ -90,7 +90,7 @@ export default function EditLeadForm({ lead }: { lead: any }) {
         </h1>
 
         <p className="text-zinc-500 mt-2">
-          Review and correct the operational data extracted by Pipewyse AI.
+          Review and correct the operational data extracted by Workwyse AI.
         </p>
       </div>
 

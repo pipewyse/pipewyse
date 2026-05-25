@@ -6,7 +6,7 @@ export default function SettingsPage() {
       </h1>
 
       <p className="text-zinc-500 mt-2">
-        Manage workspace settings for Pipewyse.
+        Manage workspace settings for Workwyse.
       </p>
     </div>
   )

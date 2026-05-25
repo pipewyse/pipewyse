@@ -41,7 +41,7 @@ export default function SignupForm() {
       <Card className="w-full max-w-md rounded-2xl border-0 shadow-sm">
         <CardHeader>
           <CardTitle className="text-2xl">
-            Create Pipewyse Account
+            Create Workwyse Account
           </CardTitle>
         </CardHeader>
 

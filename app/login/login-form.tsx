@@ -23,8 +23,8 @@ export default function LoginForm() {
 
     const email =
       username === "admin"
-        ? "admin@pipewyse.com"
-        : `${username}@pipewyse.com`
+        ? "admin@workwyse.com"
+        : `${username}@workwyse.com`
 
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -52,7 +52,7 @@ export default function LoginForm() {
         <CardContent className="p-10">
           <div className="mb-10">
             <Badge className="mb-5 rounded-full bg-white/10 text-white hover:bg-white/10">
-              Pipewyse Access
+              Workwyse Access
             </Badge>
 
             <div className="flex items-center gap-4 mb-6">
@@ -62,7 +62,7 @@ export default function LoginForm() {
 
               <div>
                 <h1 className="text-4xl font-extrabold tracking-tight text-white">
-                  Pipewyse
+                  Workwyse
                 </h1>
 
                 <p className="text-violet-100 text-sm mt-1">
@@ -123,7 +123,7 @@ export default function LoginForm() {
               disabled={loading}
               className="h-14 w-full rounded-2xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-700 hover:to-indigo-700 text-base font-bold shadow-xl shadow-violet-950/30"
             >
-              {loading ? "Logging in..." : "Login to Pipewyse"}
+              {loading ? "Logging in..." : "Login to Workwyse"}
 
               {!loading && <ArrowRight className="h-4 w-4 ml-2" />}
             </Button>

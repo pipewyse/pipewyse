@@ -125,7 +125,7 @@ export default function NewProjectPage() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-violet-100 leading-relaxed">
-              Start from a conversation, brief, or manual entry. Pipewyse qualifies the opportunity,
+              Start from a conversation, brief, or manual entry. Workwyse qualifies the opportunity,
               generates a proposal, and creates the operational project pipeline.
             </p>
           </div>
@@ -198,7 +198,7 @@ export default function NewProjectPage() {
               <StartCard
                 icon={<PenSquare className="h-7 w-7" />}
                 title="Enter Manually"
-                text="Fill in project details directly. Pipewyse will use the information to qualify the project."
+                text="Fill in project details directly. Workwyse will use the information to qualify the project."
                 active={sourceType === "Enter Manually"}
                 onClick={() => setSourceType("Enter Manually")}
               >
@@ -400,7 +400,7 @@ export default function NewProjectPage() {
                     </h2>
 
                     <p className="text-zinc-500 mt-1">
-                      Pipewyse generated the operational project workflow successfully.
+                      Workwyse generated the operational project workflow successfully.
                     </p>
                   </div>
                 </div>

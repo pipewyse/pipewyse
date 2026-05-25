@@ -311,7 +311,7 @@ function StageWorkspace({
 
           <CardContent>
             <p className="text-sm text-violet-100 leading-relaxed">
-              Pipewyse keeps the project moving through one connected lifecycle,
+              Workwyse keeps the project moving through one connected lifecycle,
               instead of splitting communication, proposal, and execution into separate tools.
             </p>
           </CardContent>

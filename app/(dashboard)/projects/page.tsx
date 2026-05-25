@@ -148,7 +148,7 @@ export default async function ProjectsPage() {
             </h2>
 
             <p className="text-zinc-500 mt-3 max-w-xl mx-auto">
-              Start by creating a new project from client communication. Pipewyse will qualify it,
+              Start by creating a new project from client communication. Workwyse will qualify it,
               generate a proposal, and create the operational pipeline.
             </p>
 
