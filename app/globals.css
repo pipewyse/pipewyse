@@ -128,3 +128,28 @@
     @apply font-sans;
   }
 }
+
+body {
+  font-family: var(--font-manrope), system-ui, sans-serif;
+}
+
+::selection {
+  background: #7c3aed;
+  color: white;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    0 24px 80px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.premium-bg {
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.18), transparent 36%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.14), transparent 32%),
+    linear-gradient(135deg, #f8fafc 0%, #f5f3ff 45%, #ffffff 100%);
+}

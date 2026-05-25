@@ -17,50 +17,75 @@ export default async function DashboardLayout({
   if (!user) {
     redirect("/login")
   }
+
   return (
-    <main className="min-h-screen bg-zinc-50">
-      <div className="flex">
-        <aside className="w-64 border-r bg-white min-h-screen p-6">
-          <div className="mb-10">
-            <h1 className="text-2xl font-bold tracking-tight">
-              Pipewyse
-            </h1>
-            <p className="text-sm text-zinc-500 mt-1">
-              AI Operational Workflow
+    <main className="min-h-screen premium-bg">
+      <div className="flex min-h-screen">
+        <aside className="w-[300px] bg-[#06111f] text-white p-5 flex flex-col relative overflow-hidden">
+          <div className="absolute -top-20 -left-20 h-52 w-52 rounded-full bg-violet-600/30 blur-3xl" />
+          <div className="absolute bottom-20 -right-24 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl" />
+
+          <div className="relative mb-12 flex items-center gap-3">
+            <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-violet-500 to-indigo-500 flex items-center justify-center font-bold shadow-xl shadow-violet-900/40">
+              P
+            </div>
+
+            <div>
+              <h1 className="text-xl font-extrabold tracking-tight">
+                Pipewyse
+              </h1>
+              <p className="text-xs text-slate-400">
+                Work. Flow. Grow.
+              </p>
+            </div>
+          </div>
+
+          <nav className="relative space-y-2 flex-1">
+            <NavItem href="/" label="Dashboard" />
+            <NavItem href="/projects" label="Projects" />
+            <NavItem href="/settings" label="Settings" />
+          </nav>
+
+          <div className="relative rounded-3xl bg-white/8 border border-white/10 p-5 mb-5 shadow-2xl">
+            <p className="text-sm font-semibold">
+              AI operations active
+            </p>
+            <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+              Pipewyse turns client communication into structured operational workflows.
             </p>
           </div>
 
-          <nav className="space-y-2">
-            <Link href="/" className="block text-zinc-600 hover:bg-zinc-100 px-4 py-3 rounded-xl">
-              Dashboard
-            </Link>
-
-            <Link href="/new-intake" className="block bg-violet-100 text-violet-700 px-4 py-3 rounded-xl font-medium">
-              New Intake
-            </Link>
-
-            <Link href="/leads" className="block text-zinc-600 hover:bg-zinc-100 px-4 py-3 rounded-xl">
-              Leads
-            </Link>
-
-            <Link href="/proposals" className="block text-zinc-600 hover:bg-zinc-100 px-4 py-3 rounded-xl">
-              Proposals
-            </Link>
-
-            <Link href="/projects" className="block text-zinc-600 hover:bg-zinc-100 px-4 py-3 rounded-xl">
-              Projects
-            </Link>
-          </nav>
+          <div className="relative">
+            <LogoutButton />
+          </div>
         </aside>
 
-        <div className="mt-10">
-          <LogoutButton />
-        </div>
-
-        <section className="flex-1 p-8">
-          {children}
+        <section className="flex-1 px-10 py-8 lg:px-14 lg:py-10 overflow-y-auto">
+          <div className="max-w-7xl mx-auto">
+            {children}
+          </div>
         </section>
       </div>
     </main>
+  )
+}
+
+function NavItem({
+  href,
+  label,
+}: {
+  href: string
+  label: string
+}) {
+  return (
+    <Link
+      href={href}
+      className="group block px-5 py-4 rounded-2xl text-[15px] font-semibold text-slate-300 hover:bg-white/10 hover:text-white transition"
+    >
+      <span className="flex items-center justify-between">
+        {label}
+        <span className="h-2 w-2 rounded-full bg-violet-400 opacity-0 group-hover:opacity-100 transition" />
+      </span>
+    </Link>
   )
 }
